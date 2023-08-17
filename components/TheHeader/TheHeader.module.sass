@@ -1,0 +1,32 @@
+@import '../../styles/variables.sass'
+@import '../../styles/fonts.sass'
+
+.container
+  max-width: 1440px
+  margin: 0 auto
+
+.wrap
+  display: flex
+  gap: 30px
+  align-items: center
+  justify-content: space-between
+  @include adaptivPadding($pcSize: 41, $mobSize: 30,$mode: 1)
+  @include adaptivPadding($pcSize: 100, $mobSize: 30,$mode: 2)
+  @include adaptivPadding($pcSize: 41, $mobSize: 30,$mode: 3)
+  @include adaptivPadding($pcSize: 100, $mobSize: 30,$mode: 4)
+  .logo
+    max-width: 120px
+    @include breakpoint($point: 2)
+      max-width: 90px
+.menu
+  width: 522px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  a
+    text-decoration: none
+    @extend %f16-14
+    svg
+      margin-left: 9px
+      fill: black

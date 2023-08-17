@@ -1,0 +1,75 @@
+@import "../../styles/variables.sass"
+@import "../../styles/fonts.sass"
+
+.container
+  position: relative
+  background: black
+  overflow: hidden
+  @include adaptivPadding($pcSize: 40, $mobSize: 15,$mode: 1)
+  @include adaptivPadding($pcSize: 40, $mobSize: 15,$mode: 3)
+  padding-left: 40px
+  border-radius: 8px
+  padding-right: 87px
+  @include breakpoint($point: 2)
+    padding-right: 0px
+    padding-left: 0px
+  h6
+    @extend %f28-20
+    padding-bottom: 12px
+    @include breakpoint($point: 4)
+      text-align: center
+  .subtitle
+    @extend %f18-11
+    @include adaptivPadding($pcSize: 115, $mobSize: 15,$mode: 3)
+    @include breakpoint($point: 4)
+      text-align: center
+  .wrapContacts
+    display: flex
+    flex-direction: column
+    gap: 50px
+    @include adaptivPadding($pcSize: 160, $mobSize: 60,$mode: 3)
+    @include breakpoint($point: 2)
+      gap: 15px
+    .boxContacts
+      display: flex
+      align-items: center
+      @include breakpoint($point: 2)
+        justify-content: center
+        flex-direction: column
+      .icon
+        margin-right: 20px
+      p
+        line-height: 24px
+        @extend %f16-12
+        @include breakpoint($point: 2)
+          width: 288px
+          text-align: center
+  .wrapSocial
+    @include breakpoint($point: 2)
+      display: flex
+      justify-content: center
+.iconElipse
+  position: absolute
+  bottom: 11%
+  right: 11%
+  @include breakpoint($point: 2)
+    bottom: 0
+  &::before
+    content: ""
+    position: absolute
+    top: 45px
+    left: 0
+    width: 269px
+    height: 269px
+    border-radius: 269px
+    background: #1A1A1A
+    z-index: 1
+    @include breakpoint($point: 2)
+      width: 192px
+      height: 192px
+  svg
+    width: 138px
+    z-index: 5
+    position: relative
+    @include breakpoint($point: 2)
+      width: 54px

@@ -1,0 +1,16 @@
+@import "../../styles/variables.sass"
+@import "../../styles/fonts.sass"
+
+.container
+  border-radius: 10px
+  background: #131313
+  padding: 14px
+
+  .title
+    @extend %f18-16
+    padding-bottom: 29px
+    @include breakpoint($point: 2)
+      padding-bottom: 23px
+  .subTitle
+    padding-top: 20px
+    @extend %f13

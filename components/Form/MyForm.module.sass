@@ -1,0 +1,52 @@
+@import "../../styles/variables.sass"
+@import "../../styles/fonts.sass"
+
+.container
+  width: 100%
+  position: relative
+  z-index: 1
+  @include adaptivPadding($pcSize: 50, $mobSize: 30,$mode: 1)
+  @include adaptivPadding($pcSize: 50, $mobSize: 20,$mode: 2)
+  @include adaptivPadding($pcSize: 50, $mobSize: 20,$mode: 4)
+  .svgImage
+    position: absolute
+    transform: rotate(-1deg)
+    right: 23%
+    bottom: -3%
+    @include breakpoint($point: 4)
+      right: 50%
+      bottom: -5%
+    img
+      @include breakpoint($point: 4)
+        width: 100px
+        height: 100px
+  .wrapInput
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 50px 40px
+    @include adaptivPadding($pcSize: 45, $mobSize: 20,$mode: 3)
+    @include breakpoint($point: 2)
+      grid-template-columns: 1fr
+      grid-gap: 20px
+  .parag
+    font-size: 14px
+    font-style: normal
+    font-weight: 600
+    line-height: 20px
+    @include adaptivPadding($pcSize: 15, $mobSize: 10,$mode: 3)
+  .wrapRadio
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 10px
+    @include adaptivPadding($pcSize: 70, $mobSize: 50,$mode: 3)
+    @include breakpoint($point: 2)
+      grid-template-columns: repeat(2, 1fr)
+  .inputMassage
+    @include adaptivPadding($pcSize: 45, $mobSize: 25,$mode: 3)
+
+  .wrapButton
+    display: flex
+    justify-content: flex-end
+    @include breakpoint($point: 4)
+      padding-bottom: 62px
+      flex-direction: column

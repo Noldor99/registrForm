@@ -1,0 +1,22 @@
+@import "../styles/variables.sass"
+@import "../styles/fonts.sass"
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  @include adaptivPadding($pcSize: 40, $mobSize: 20,$mode: 1)
+  padding-bottom: 50px
+
+.title
+  text-align: center
+  @extend %f40-24
+  @include adaptivPadding($pcSize: 20, $mobSize: 15,$mode: 3)
+.subtitle
+  line-height: 21px
+  text-align: center
+  @extend %f18-14
+  @include adaptivPadding($pcSize: 50, $mobSize: 25,$mode: 3)
+  @include breakpoint($point: 2)
+    width: 204px
+    margin: 0 auto
+.contactBox
